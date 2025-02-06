@@ -9,7 +9,9 @@ import SignUpPage from "@/pages/SignUp";
 import { Sidebar } from "./components/ui/sidebar";
 import DashboardLayout from "./layouts/DashboardLayout";
 import ApiKeysPage from "./pages/ApiKeys";
+import VideosPage from "./pages/Videos";
 import NotFound from "./pages/NotFound";
+import ProfilePage from "./pages/Profile";
 
 
 const root = createRoot(document.getElementById("root")!!);
@@ -25,6 +27,8 @@ root.render(<BrowserRouter>
       <Route element={<DashboardLayout />}>
         
         <Route path="/api-keys" element={<ApiKeysPage />} />
+        <Route path="/videos" element={<VideosPage />} />
+        <Route path="/profile" element={<ProfilePage />} />
       </Route>
       <Route path='*' element={<NotFound />} />
     </Routes>
